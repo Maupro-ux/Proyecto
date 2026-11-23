@@ -1,0 +1,16 @@
+<resources>
+    <color name="color_primary">#126E63</color>
+    <color name="color_on_primary">#FFFFFF</color>
+    <color name="color_primary_container">#A8F0E2</color>
+    <color name="color_secondary">#59636A</color>
+    <color name="color_background">#F5F7F7</color>
+    <color name="color_surface">#FFFFFF</color>
+    <color name="color_surface_dark">#101819</color>
+    <color name="color_on_surface">#172322</color>
+    <color name="color_emerald">#10B981</color>
+    <color name="color_amber">#F59E0B</color>
+    <color name="color_alert">#EF4444</color>
+    <color name="color_hud_background">#990B1112</color>
+    <color name="color_white">#FFFFFF</color>
+    <color name="color_black">#000000</color>
+</resources>
