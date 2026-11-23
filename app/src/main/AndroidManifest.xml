@@ -1,0 +1,31 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+
+    <uses-feature android:name="android.hardware.fingerprint" android:required="false" />
+    <uses-feature android:name="android.hardware.camera.any" android:required="false" />
+    <uses-feature android:name="android.hardware.sensor.gyroscope" android:required="false" />
+    <uses-feature android:name="android.hardware.sensor.accelerometer" android:required="false" />
+
+    <application
+        android:allowBackup="false"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.GyroCamPro">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.auth.LoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorSurface"
+    android:padding="28dp">
+
+    <ImageView
+        android:id="@+id/login_fingerprint_icon"
+        android:layout_width="88dp"
+        android:layout_height="88dp"
+        android:contentDescription="@string/login_biometric_button"
+        android:src="@drawable/ic_fingerprint"
+        app:layout_constraintBottom_toTopOf="@id/login_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/login_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="@string/login_title"
+        android:textAppearance="?attr/textAppearanceHeadlineLarge"
+        android:textColor="?attr/colorOnSurface"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/login_subtitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/login_fingerprint_icon" />
+
+    <TextView
+        android:id="@+id/login_subtitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="@string/login_subtitle"
+        android:textAppearance="?attr/textAppearanceBodyLarge"
+        android:textColor="?attr/colorOnSurfaceVariant"
+        app:layout_constraintBottom_toTopOf="@id/login_status"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/login_title" />
+
+    <TextView
+        android:id="@+id/login_status"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="?attr/colorSurfaceContainer"
+        android:gravity="center"
+        android:minHeight="72dp"
+        android:padding="16dp"
+        android:text="@string/login_initial_status"
+        android:textAppearance="?attr/textAppearanceBodyMedium"
+        android:textColor="?attr/colorOnSurface"
+        app:layout_constraintBottom_toTopOf="@id/login_auth_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/login_subtitle" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/login_auth_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:minHeight="56dp"
+        android:text="@string/login_biometric_button"
+        app:icon="@drawable/ic_fingerprint"
+        app:iconPadding="12dp"
+        app:layout_constraintBottom_toTopOf="@id/login_settings_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/login_status" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/login_settings_button"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/login_security_button"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/login_auth_button" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
