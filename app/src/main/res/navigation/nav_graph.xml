@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/cameraHudFragment">
+
+    <fragment
+        android:id="@+id/cameraHudFragment"
+        android:name="com.proyecto.gyrocampro.ui.camera.CameraHudFragment"
+        android:label="@string/nav_camera" />
+
+    <fragment
+        android:id="@+id/galleryCrudFragment"
+        android:name="com.proyecto.gyrocampro.ui.gallery.GalleryCrudFragment"
+        android:label="@string/nav_gallery" />
+
+    <fragment
+        android:id="@+id/sensorLabFragment"
+        android:name="com.proyecto.gyrocampro.ui.sensors.SensorLabFragment"
+        android:label="@string/nav_sensors" />
+</navigation>
