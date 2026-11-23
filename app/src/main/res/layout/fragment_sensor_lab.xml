@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="18dp">
+
+        <TextView
+            android:id="@+id/sensor_lab_heading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/sensor_lab_title"
+            android:textAppearance="?attr/textAppearanceHeadlineSmall"
+            android:textColor="?attr/colorOnSurface"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/sensor_lab_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="@string/sensor_lab_description"
+            android:textAppearance="?attr/textAppearanceBodyMedium"
+            android:textColor="?attr/colorOnSurfaceVariant" />
+
+        <TextView
+            android:id="@+id/sensor_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:background="?attr/colorSurfaceContainer"
+            android:padding="12dp"
+            android:text="@string/sensor_diagnostics_ready"
+            android:textAppearance="?attr/textAppearanceBodySmall"
+            android:textColor="?attr/colorOnSurface" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            app:cardCornerRadius="18dp"
+            app:cardElevation="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/gyro_section_title"
+                    android:textAppearance="?attr/textAppearanceTitleMedium"
+                    android:textColor="?attr/colorPrimary"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <TextView android:layout_width="42dp" android:layout_height="wrap_content" android:text="@string/axis_x" android:textColor="?attr/colorOnSurface" />
+                    <ProgressBar android:id="@+id/gyro_x_progress" style="?android:attr/progressBarStyleHorizontal" android:layout_width="0dp" android:layout_height="10dp" android:layout_weight="1" android:max="100" android:progressTint="@color/color_primary" />
+                    <TextView android:id="@+id/gyro_x_value" android:layout_width="64dp" android:layout_height="wrap_content" android:gravity="end" android:text="@string/axis_value_initial" android:textColor="?attr/colorOnSurface" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <TextView android:layout_width="42dp" android:layout_height="wrap_content" android:text="@string/axis_y" android:textColor="?attr/colorOnSurface" />
+                    <ProgressBar android:id="@+id/gyro_y_progress" style="?android:attr/progressBarStyleHorizontal" android:layout_width="0dp" android:layout_height="10dp" android:layout_weight="1" android:max="100" android:progressTint="@color/color_primary" />
+                    <TextView android:id="@+id/gyro_y_value" android:layout_width="64dp" android:layout_height="wrap_content" android:gravity="end" android:text="@string/axis_value_initial" android:textColor="?attr/colorOnSurface" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <TextView android:layout_width="42dp" android:layout_height="wrap_content" android:text="@string/axis_z" android:textColor="?attr/colorOnSurface" />
+                    <ProgressBar android:id="@+id/gyro_z_progress" style="?android:attr/progressBarStyleHorizontal" android:layout_width="0dp" android:layout_height="10dp" android:layout_weight="1" android:max="100" android:progressTint="@color/color_primary" />
+                    <TextView android:id="@+id/gyro_z_value" android:layout_width="64dp" android:layout_height="wrap_content" android:gravity="end" android:text="@string/axis_value_initial" android:textColor="?attr/colorOnSurface" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            app:cardCornerRadius="18dp"
+            app:cardElevation="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/accelerometer_section_title"
+                    android:textAppearance="?attr/textAppearanceTitleMedium"
+                    android:textColor="?attr/colorPrimary"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <TextView android:layout_width="42dp" android:layout_height="wrap_content" android:text="@string/axis_x" android:textColor="?attr/colorOnSurface" />
+                    <ProgressBar android:id="@+id/accel_x_progress" style="?android:attr/progressBarStyleHorizontal" android:layout_width="0dp" android:layout_height="10dp" android:layout_weight="1" android:max="100" android:progressTint="@color/color_primary" />
+                    <TextView android:id="@+id/accel_x_value" android:layout_width="64dp" android:layout_height="wrap_content" android:gravity="end" android:text="@string/axis_value_initial" android:textColor="?attr/colorOnSurface" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <TextView android:layout_width="42dp" android:layout_height="wrap_content" android:text="@string/axis_y" android:textColor="?attr/colorOnSurface" />
+                    <ProgressBar android:id="@+id/accel_y_progress" style="?android:attr/progressBarStyleHorizontal" android:layout_width="0dp" android:layout_height="10dp" android:layout_weight="1" android:max="100" android:progressTint="@color/color_primary" />
+                    <TextView android:id="@+id/accel_y_value" android:layout_width="64dp" android:layout_height="wrap_content" android:gravity="end" android:text="@string/axis_value_initial" android:textColor="?attr/colorOnSurface" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <TextView android:layout_width="42dp" android:layout_height="wrap_content" android:text="@string/axis_z" android:textColor="?attr/colorOnSurface" />
+                    <ProgressBar android:id="@+id/accel_z_progress" style="?android:attr/progressBarStyleHorizontal" android:layout_width="0dp" android:layout_height="10dp" android:layout_weight="1" android:max="100" android:progressTint="@color/color_primary" />
+                    <TextView android:id="@+id/accel_z_value" android:layout_width="64dp" android:layout_height="wrap_content" android:gravity="end" android:text="@string/axis_value_initial" android:textColor="?attr/colorOnSurface" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            app:cardCornerRadius="18dp"
+            app:cardElevation="1dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="16dp">
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/theme_dark_mode" android:textAppearance="?attr/textAppearanceTitleMedium" android:textColor="?attr/colorOnSurface" />
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:text="@string/theme_mode_description" android:textAppearance="?attr/textAppearanceBodySmall" android:textColor="?attr/colorOnSurfaceVariant" />
+                </LinearLayout>
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/dark_mode_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/theme_dark_mode" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/sensor_logout_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:minHeight="54dp"
+            android:text="@string/sensor_logout_button"
+            app:icon="@drawable/ic_logout"
+            app:iconPadding="10dp" />
+
+    </LinearLayout>
+</ScrollView>
